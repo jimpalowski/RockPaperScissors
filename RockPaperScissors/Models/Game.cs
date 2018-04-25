@@ -10,22 +10,22 @@ namespace RockPaperScissor.Models
 
     public Game(string player1, string player2)
     {
-      _p1 = player1;
-      _p2 = player2;
+      _player1 = player1;
+      _player2 = player2;
     }
 
     public string Play()
     {
       string result = "";
-      if ((_p1=="rock" && _p2=="scissors") || (_p1=="scissors"&&_p2=="paper") || (_p1=="paper"&&_p2=="rock"))
+      if ((_player1=="rock" && _player2=="scissors") || (_player1=="scissors"&&_player2=="paper") || (_player1=="paper"&&_player2=="rock"))
       {
         result = "Player 1";
       }
-      else if ((_p2=="rock" && _p1=="scissors") || (_p2=="scissors"&&_p1=="paper") || (_p2=="paper"&&_p1=="rock"))
+      else if ((_player2=="rock" && _player1=="scissors") || (_player2=="scissors"&&_player1=="paper") || (_player2=="paper"&&_player1=="rock"))
       {
         result = "Player 2";
       }
-      else if ((_p1 == _p2))
+      else if ((_player1 == _player2))
       {
         result = "Draw";
       }
